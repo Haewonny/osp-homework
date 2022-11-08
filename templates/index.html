@@ -6,64 +6,60 @@
     <title>Home</title>
     <link
       rel="stylesheet"
-      href="{{ url_for('static', filename='style.css') }}"
+      href="{{ url_for('static', filename='css/main.css') }}"
     />
-    <script src="{{ url_for('static', filename='main.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='JS/main.js') }}" defer></script>
   </head>
   <body>
-    <nav class="navbar">
+    <nav
+      class="navbar"
+      style="
+        width: 1920px;
+        height: 70px;
+        background: white;
+      "
+    >
       <div class="navbar__logo">
-        <a href="">comong</a>
+        <a href="/" style="float: left;">
+          <img
+            class="logo-img"
+            style="width: 100px; margin-top: 18px;"
+            src="{{ url_for('static', filename='images/logo.png') }}"
+          />
+        </a>
       </div>
       <ul class="navbar__menu">
-        <li><a href="/list">List</a></li>
-        <li><a href="/review">Review</a></li>
-        <li><a href="/register_restaurant">Register_restaurant</a></li>
-        <li><a href="/register_review">Register_review</a></li>
+        <li> <!-- 맛집 등록 화면 -->
+          <a href="/register_restaurant" style="color: #ffba94; margin: 15px 0 0 1000px; font-weight: bold; font-size: 20px;">맛집 등록하기</a>
+        </li>
+        <li> <!-- 리뷰 등록 화면 -->
+          <a href="/register_review" style="color: #ffba94; margin: 15px 0 0 20px; font-weight: bold; font-size: 20px;">리뷰 등록하기</a>
+        </li>
+        <li>
+          <a href="/result" style="color: #ffba94; margin: 15px 0 0 20px; font-weight: bold; font-size: 20px;">결과</a>
+        </li>
       </ul>
     </nav>
+    <div style="position: absolute; background: #fff7ef; width: 100vw; height: 200px;">
+      <p style="position: relative;font-style: normal;font-weight: 400; font-size: 28px; line-height: 38px; text-align: center; color: #424242; top: 30px;">
+        무엇을 먹을지 고민될 때는?
+      </p>
+      <p style="position: relative; font-style: normal; font-weight: 700; font-size: 50px; line-height: 70px; text-align: center; color: #424242; top: -10px;">
+        "커몽으로 COME ON"
+      </p>
+    </div>
+  <div style="position: absolute; top: 300px; font-weight: 700; font-size: 24px; line-height: 38px; text-align: center; float: left; margin: 0 0 20px 150px; color: #424242;">
+    커몽 추천 맛집
+  </div>
+  <img style="position: relative; width: 400px; margin: 280px 20px 20px 150px; float: left;"  src="{{ url_for('static', filename='images/main0.jpg') }}"/>
+  <img style="position: relative; width: 400px; margin: 280px 20px 20px 20px; float: left;"  src="{{ url_for('static', filename='images/main1.jpg') }}"/>
+  <img style="position: relative; width: 400px; margin: 280px 20px 20px 20px; display: block;"  src="{{ url_for('static', filename='images/main2.jpg') }}"/>
+  <img style="position: relative; width: 400px; margin: 10px 20px 20px 150px; float: left; "  src="{{ url_for('static', filename='images/main3.jpg') }}"/>
+  <img style="position: relative; width: 400px; margin: 10px 20px 20px 20px; float: left;"  src="{{ url_for('static', filename='images/main4.jpg') }}"/>
+  <img style="position: relative; width: 400px; margin: 30px 20px 20px 20px; display: block;"  src="{{ url_for('static', filename='images/main5.png') }}"/>
+  <img style="position: relative; width: 400px; margin: 10px 20px 20px 150px; float: left; "  src="{{ url_for('static', filename='images/main6.png') }}"/>
+  <img style="position: relative; width: 400px; margin: 10px 20px 20px 20px; float: left;"  src="{{ url_for('static', filename='images/main7.png') }}"/>
+  <img style="position: relative; width: 400px; margin: 30px 20px 20px 20px; display: block;"  src="{{ url_for('static', filename='images/main8.png') }}"/>
 
-    <form action="/submit_restaurant" method="get">
-      <div>
-        <br /><br />
-        <label for="name">Restaurant name: </label>
-        <input type="text" name="name" id="name" required /><br /><br />
-      </div>
-      <div>
-        <label for="addr">Restaurant address: </label>
-        <input type="text" name="addr" id="addr" required /><br /><br />
-      </div>
-      <div>
-        <label for="tel">Restaurant Tel.: </label>
-        <input type="text" name="tel" id="tel" required /><br /><br />
-      </div>
-      <div>
-        <label for="category">Food category: </label>
-        <br />
-        <select id="category" name="category">
-          <option value="Korean" selected>Korean</option>
-          <option value="Chinese">Chinese</option>
-          <option value="Italian">Italian</option>
-          <option value="Japanese">Japanese</option></select
-        ><br /><br />
-      </div>
-      <div>
-        <label for="park">Parking (Y/N): </label>
-        <br />
-        <select id="park" name="park">
-          <option value="Y" selected>Yes</option>
-          <option value="N">No</option></select
-        ><br /><br />
-      </div>
-      <div>
-        <label for="time">Open/Close Time : </label>
-        <input type="text" name="time" id="time" /><br /><br />
-      </div>
-      <div>
-        <label for="site">Homepage URL : </label>
-        <input type="text" name="site" id="site" /><br /><br />
-      </div>
-      <div><input type="submit" value="Submit!" /><br /><br /></div>
-    </form>
   </body>
 </html>
