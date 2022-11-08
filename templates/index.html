@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+    <script src="{{ url_for('static', filename='main.js') }}" defer></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar__logo">
+        <a href="">comong</a>
+      </div>
+      <ul class="navbar__menu">
+        <li><a href="/list">List</a></li>
+        <li><a href="/review">Review</a></li>
+        <li><a href="/register_restaurant">Register_restaurant</a></li>
+        <li><a href="/register_review">Register_review</a></li>
+      </ul>
+    </nav>
+
+    <form action="/submit_restaurant" method="get">
+      <div>
+        <br /><br />
+        <label for="name">Restaurant name: </label>
+        <input type="text" name="name" id="name" required /><br /><br />
+      </div>
+      <div>
+        <label for="addr">Restaurant address: </label>
+        <input type="text" name="addr" id="addr" required /><br /><br />
+      </div>
+      <div>
+        <label for="tel">Restaurant Tel.: </label>
+        <input type="text" name="tel" id="tel" required /><br /><br />
+      </div>
+      <div>
+        <label for="category">Food category: </label>
+        <br />
+        <select id="category" name="category">
+          <option value="Korean" selected>Korean</option>
+          <option value="Chinese">Chinese</option>
+          <option value="Italian">Italian</option>
+          <option value="Japanese">Japanese</option></select
+        ><br /><br />
+      </div>
+      <div>
+        <label for="park">Parking (Y/N): </label>
+        <br />
+        <select id="park" name="park">
+          <option value="Y" selected>Yes</option>
+          <option value="N">No</option></select
+        ><br /><br />
+      </div>
+      <div>
+        <label for="time">Open/Close Time : </label>
+        <input type="text" name="time" id="time" /><br /><br />
+      </div>
+      <div>
+        <label for="site">Homepage URL : </label>
+        <input type="text" name="site" id="site" /><br /><br />
+      </div>
+      <div><input type="submit" value="Submit!" /><br /><br /></div>
+    </form>
+  </body>
+</html>
