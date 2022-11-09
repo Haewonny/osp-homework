@@ -4,62 +4,74 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/main.css') }}"
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}"
     />
     <script src="{{ url_for('static', filename='JS/main.js') }}" defer></script>
   </head>
-  <body>
-    <nav
-      class="navbar"
-      style="
-        width: 1920px;
-        height: 70px;
-        background: white;
-      "
-    >
-      <div class="navbar__logo">
-        <a href="/" style="float: left;">
-          <img
-            class="logo-img"
-            style="width: 100px; margin-top: 18px;"
-            src="{{ url_for('static', filename='images/logo.png') }}"
-          />
-        </a>
-      </div>
+    <body>
+    <nav class="navbar">
+      <a href="/" style="float: left;">
+        <img class="logo-img" src="{{ url_for('static', filename='images/logo.png') }}" />
+      </a>
       <ul class="navbar__menu">
-        <li> <!-- 맛집 등록 화면 -->
-          <a href="/register_restaurant" style="color: #ffba94; margin: 15px 0 0 1000px; font-weight: bold; font-size: 20px;">맛집 등록하기</a>
-        </li>
-        <li> <!-- 리뷰 등록 화면 -->
-          <a href="/register_review" style="color: #ffba94; margin: 15px 0 0 20px; font-weight: bold; font-size: 20px;">리뷰 등록하기</a>
+        <li>
+          <!-- 맛집 등록 화면 -->
+          <a href="/register_restaurant">맛집 등록하기</a>
         </li>
         <li>
-          <a href="/result" style="color: #ffba94; margin: 15px 0 0 20px; font-weight: bold; font-size: 20px;">결과</a>
+          <!-- 리뷰 등록 화면 -->
+          <a href="/register_review">리뷰 등록하기</a>
+        </li>
+        <li>
+          <a href="/result">결과</a>
         </li>
       </ul>
     </nav>
-    <div style="position: absolute; background: #fff7ef; width: 100vw; height: 200px;">
-      <p style="position: relative;font-style: normal;font-weight: 400; font-size: 28px; line-height: 38px; text-align: center; color: #424242; top: 30px;">
+    <div class="banner">
+      <p class="banner_text1">
         무엇을 먹을지 고민될 때는?
       </p>
-      <p style="position: relative; font-style: normal; font-weight: 700; font-size: 50px; line-height: 70px; text-align: center; color: #424242; top: -10px;">
+      <p class="banner_text2">
         "커몽으로 COME ON"
       </p>
     </div>
-  <div style="position: absolute; top: 300px; font-weight: 700; font-size: 24px; line-height: 38px; text-align: center; float: left; margin: 0 0 20px 150px; color: #424242;">
-    커몽 추천 맛집
-  </div>
-  <img style="position: relative; width: 400px; margin: 280px 20px 20px 150px; float: left;"  src="{{ url_for('static', filename='images/main0.jpg') }}"/>
-  <img style="position: relative; width: 400px; margin: 280px 20px 20px 20px; float: left;"  src="{{ url_for('static', filename='images/main1.jpg') }}"/>
-  <img style="position: relative; width: 400px; margin: 280px 20px 20px 20px; display: block;"  src="{{ url_for('static', filename='images/main2.jpg') }}"/>
-  <img style="position: relative; width: 400px; margin: 10px 20px 20px 150px; float: left; "  src="{{ url_for('static', filename='images/main3.jpg') }}"/>
-  <img style="position: relative; width: 400px; margin: 10px 20px 20px 20px; float: left;"  src="{{ url_for('static', filename='images/main4.jpg') }}"/>
-  <img style="position: relative; width: 400px; margin: 30px 20px 20px 20px; display: block;"  src="{{ url_for('static', filename='images/main5.png') }}"/>
-  <img style="position: relative; width: 400px; margin: 10px 20px 20px 150px; float: left; "  src="{{ url_for('static', filename='images/main6.png') }}"/>
-  <img style="position: relative; width: 400px; margin: 10px 20px 20px 20px; float: left;"  src="{{ url_for('static', filename='images/main7.png') }}"/>
-  <img style="position: relative; width: 400px; margin: 30px 20px 20px 20px; display: block;"  src="{{ url_for('static', filename='images/main8.png') }}"/>
-
+    <div class="title">
+      커몽 추천 맛집
+    </div>
+    <div class="main_container">
+      <div class="main_row">
+        <div class="column1">
+          <img src="{{ url_for('static', filename='images/main0.jpg') }}" class="main_img"/>
+        </div>
+        <div class="column2">
+          <img src="{{ url_for('static', filename='images/main1.jpg') }}" class="main_img"/>
+        </div>
+        <div class="column3">
+          <img src="{{ url_for('static', filename='images/main2.jpg') }}" class="main_img"/>
+        </div>
+      </div>
+      <div class="main_row">
+        <div class="column1">
+          <img src="{{ url_for('static', filename='images/main3.jpg') }}" class="main_img"/>
+        </div>
+        <div class="column2">
+          <img src="{{ url_for('static', filename='images/main4.jpg') }}" class="main_img"/>
+        </div>
+        <div class="column3">
+          <img src="{{ url_for('static', filename='images/main5.png') }}" class="main_img"/>
+        </div>
+      </div>
+      <div class="main_row">
+        <div class="column1">
+          <img src="{{ url_for('static', filename='images/main6.png') }}" class="main_img"/>
+        </div>
+        <div class="column2">
+          <img src="{{ url_for('static', filename='images/main7.png') }}" class="main_img"/>
+        </div>
+        <div class="column3">
+          <img src="{{ url_for('static', filename='images/main8.png') }}" class="main_img"/>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
