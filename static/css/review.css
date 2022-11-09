@@ -1,5 +1,150 @@
-.background{
+.star {
+    position: relative;
+    font-size: 2rem;
+    color: #ddd;
+  }
+  
+  .star input {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .star span {
+    width: 0;
+    position: absolute; 
+    left: 0;
+    color: #ffb468;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .postReviewBG{
+    background: #FFF7EF;
     width: 100vw;
     height: 100vh;
-    background: #FFF7EF;
+}
+
+.Box{
+    width: 450px;
+    height: 450px;
+    background: #FFFFFF;
+    border-radius: 25px;
+  }
+
+  .Boxs{
+    width: 200px;
+    height: 200px;
+    background: #FFFFFF;
+    border-radius: 10px;
+  }
+
+  .column{
+    flex-direction: column;
+    justify-items: center;
+    float: left;
+    margin: 150px;
+    width: 450px;
+    height: 503px;
+  }
+  
+  .info{
+    margin: 150px;
+    width: 1200px;
+  }
+
+  .line{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+  }
+
+  .TextI{
+    color: rgb(125, 125, 125);
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 40px;
+    font-family: 'Spoqa Han Sans Neo';
+    font-weight: 10px;
+  }
+
+  .Write1{
+    border-radius: 8px;
+    border-color: transparent;
+    width: 100px;
+    height: 30px;
+    resize: none;
+    font-family: 'Spoqa Han Sans Neo';
+    font-weight: 10px;
+    text-align: center;
+  }
+  
+  .Write2{
+    border-radius: 8px;
+    border-color: transparent;
+    width: 300px;
+    height: 30px;
+    font-family: 'Spoqa Han Sans Neo';
+    font-weight: 10px;
+    text-align: center;
+  }
+
+  .textArea{
+    width: 590px;
+    height: 250px;
+    border: none;
+    border-radius: 8px;
+    resize: none;
+    font-family: 'Spoqa Han Sans Neo';
+    font-weight: 10px;
+  }
+
+  .File{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    position: absolute;
+    margin: 200px;
+  }
+  
+  .postContainer{
+  background: #fff7ef;
+  display: flex;
+  height: 90%;
+  width: 100%;
+  z-index: 3;
+  scroll-snap-align: start;
+  }
+
+  .Wrap{
+    display: flex;
+    flex-direction: row;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .buttonR{
+    background-color: #ffa574;
+    color: white;
+    font-family: 'Spoqa Han Sans Neo';
+    font-style: normal;font-weight: 700;  
+    font-size: 20px;
+    font-size: 14px;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+  }
+
+  .Wraps{
+    text-align: center;
+    margin: 30px auto;
+  }
+
+.buttonR:hover{
+  background-color: #FAD4B2;
 }
