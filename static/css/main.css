@@ -33,7 +33,7 @@ li a {
 .banner {
   background: #fff7ef;
   width: 100vw;
-  height: 25vh;
+  height: 45vh;
 }
 
 .banner_text1 {
@@ -119,7 +119,5 @@ li a {
 }
 
 .main_img:hover {
-  max-width: 461.98px;
-
-  opacity: 0.2;
+ opacity: 0.2;
 }
