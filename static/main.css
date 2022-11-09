@@ -119,7 +119,7 @@ li a {
 }
 
 .main_img:hover {
-  width: 461.98px;
+  max-width: 461.98px;
 
   opacity: 0.2;
 }
