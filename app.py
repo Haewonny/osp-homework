@@ -16,6 +16,12 @@ def reg_restaurant():
 
 @app.route("/register_review")
 def reg_review():
+    nickname = request.args.get("nickname")
+    menu = request.args.get("menu")
+    star = request.args.get("star")
+    content = request.args.get("content")
+
+    print(nickname, menu, star, content)
     return render_template("register_review.html")
 
 
