@@ -15,24 +15,24 @@
       <div class="postReviewBG">
       <div class="column">
           <div class="Box">
-          </div> 
+          </div>
       </div>
           <form action="/register_review" class="info" method="get">
           <div class="line">
-          <div class="TextI"><label for="nickname">닉네임</label> </div>
+          <label class="TextI" for="nickname">닉네임</label>
           <input class="Write1" type="text" placeholder="김이화" name="nickname" id="nickname" required />
-          <div class="TextI"><label for="menu">메뉴이름</label></div>
+          <label class="TextI" for="menu">메뉴이름</label>
           <input class="Write2" type="text" placeholder="정확한 메뉴명을 입력해주세요!" name="menu" id="menu" required />
           </div>
           <div class="Wrap">
-          <div class="TextI" style="margin-right:5px;"><label for="star">별점</label></div>
+          <label class="TextI" style="margin-right:5px;" for="star">별점</label>
           <span class="star">
               ★★★★★
               <span>★★★★★</span>
               <input type="range" oninput="drawStar(this)" value="1" step="1" min="0" max="10" name="star" id="star" required />
           </span>
           </div>
-          <div class="TextI"><label for="content">리뷰내용</label></div>
+          <label class="TextI" for="content">리뷰내용</label>
               <textarea class="textArea" placeholder="내용을 입력해주세요!" required maxlength="100" name="content" id="content" required > </textarea>
           <div class="Wraps">
           <input class="buttonR" type='submit' value='등록하기'/>
