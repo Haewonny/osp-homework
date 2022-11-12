@@ -23,6 +23,10 @@
           <a href="/register_review">리뷰 등록하기</a>
         </li>
         <li>
+          <!-- 리뷰 조회 화면 -->
+          <a href="/register_reviewpost">리뷰 조회하기</a>
+        </li>
+        <li>
           <a href="/result">결과</a>
         </li>
       </ul>
@@ -41,7 +45,7 @@
     <div class="main_container">
       <div class="main_row">
         <div class="column1">
-          <img src="{{url_for('static', filename='img/main0.jpg')}}" class="main_img"/>
+            <img src="{{ url_for('static', filename='img/main0.jpg') }}" class="main_img"/>
         </div>
         <div class="column2">
           <img src="{{ url_for('static', filename='img/main1.jpg') }}" class="main_img"/>

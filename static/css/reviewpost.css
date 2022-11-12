@@ -1,0 +1,39 @@
+.rvPostContainer{
+  background: #fff7ef;
+  display: flex;
+  height: 90%;
+  width: 100%;
+  scroll-snap-align: start;
+  }
+
+.rvPostBG{
+    background: #FFF7EF;
+    width: 100vw;
+    height: 100vh;
+}
+
+.rvBox{
+    width: 1400px;
+    height: 700px;
+    background: #FFFFFF;
+    border-radius: 25px;
+    position: absolute;
+    top : 60%;
+    left : 50%;
+    transform : translate(-50%, -50%);
+  }
+
+.navbar {
+  display: inline;
+  width: 100vw;
+  height: 60px;
+  float: left;
+  background: white;
+}
+
+.logo-img {
+  display: grid;
+  float: left;
+  width: 100px;
+  margin: 0px 100px 0 20px;
+}

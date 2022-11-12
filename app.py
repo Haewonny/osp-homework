@@ -29,6 +29,10 @@ def reg_review():
 def reg_result():
     return render_template("result.html")
 
+@app.route("/register_reviewpost")
+def reg_reviewpost():
+    return render_template("register_reviewpost.html")
+
 
 @app.route("/submit_restaurant")
 def reg_restaurant_submit():
