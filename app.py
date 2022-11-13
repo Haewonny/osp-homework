@@ -24,10 +24,10 @@ def reg_review():
     print(nickname, menu, star, content)
     return render_template("register_review.html")
 
-@app.route("/register_review_post", methods=['POST'])
+@app.route("/register_reviewpost", methods=['POST'])
 def reg_review_post():
     data=request.form
-    return render_template("submit_review_result.html", data=data)
+    return render_template("register_reviewpost.html", data=data)
 
 
 @app.route("/result")

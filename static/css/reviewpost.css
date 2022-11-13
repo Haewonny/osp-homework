@@ -47,6 +47,11 @@ table.type1{
  color: #424242;
 }
 
+table.type3{
+ text-align : center;
+ font-family: 'Spoqa Han Sans Neo';
+}
+
 hr.line{
   width : 530px;
   margin-left : 130px;
@@ -68,4 +73,8 @@ hr.line2{
 
 .featehr_img{
  margin-left : 100px;
+}
+
+.rvcontent{
+ text-align : center;
 }
