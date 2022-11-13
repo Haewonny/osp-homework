@@ -2,39 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>submit_restaurant_result</title>
 </head>
 <body>
-   <form method="post" enctype="multipart/form-data" action="/submit_restaurant_post">
-        <div>
-            <label for="img">Representative Image upload : </label>
-            <input type="file" name="file" /><br><br>
-        </div>
-    </form>
     <section>
-      <p>
-        식당이름 {{data.rname}} 카테고리 {{data.cate}} 주차여부 {{data.park}}
-      </p>
-      <p>
-        식당 주소 {{data.addr}}
-      </p>
-      <p>
-        전화번호 {{data.tel}} 가격대 {{data.price1}} ~ {{data.price2}}
-      </p>
-      <p>
-        영업시간 {{data.time}} 사이트 {{data.site}} }
-      </p>
-
-      <p>
-        대표메뉴명 {{data.bestmenuname}} 대표메뉴 가격 {{data.bestmenuprice}}
-      </p>
+        RESULT <br>
+        식당이름 : {{data.rname}} <br>
+        카테고리 : {{data.cate}} <br>
+        주차여부 : {{data.park}} <br>
+        식당 주소 : {{data.addr}} <br>
+        전화번호 : {{data.tel}} <br>
+        가격대 : {{data.price1}} ~ {{data.price2}} <br>
+        영업시간 :{{data.time}} <br>
+        사이트 : {{data.site}} <br>
+        <br><br>
+        BESTMENU RESULT <br>
+        대표메뉴명 : {{data.bestmenuname}} <br>
+        대표메뉴 가격 : {{data.bestmenuprice}} <br>
     </section>
-   <form method="post" enctype="multipart/form-data" action="/submit_restaurant_post">
-        <div>
-            <label for="img">Representative Image upload : </label>
-            <input type="file" name="file" /><br><br>
-        </div>
-    </form>
-
 </body>
 </html>

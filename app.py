@@ -41,7 +41,9 @@ def reg_reviewpost():
 
 @app.route("/submit_restaurant_result", methods=['POST'])
 def reg_restaurant_submit_result():
-	image_file = request.files["file"]
+	image_file = request.files["file1"]
+	image_file.save("static/image/{}".format(image_file.filename))
+	image_file = request.files["file2"]
 	image_file.save("static/image/{}".format(image_file.filename))
 	data=request.form
 	return render_template("submit_restaurant_result.html", data=data)
