@@ -37,3 +37,35 @@
   width: 100px;
   margin: 0px 100px 0 20px;
 }
+
+table.type1{
+ width : 1220px;
+ height : 80px;
+ text-align : center;
+ font-family: 'Spoqa Han Sans Neo';
+ font-size : 18px;
+ color: #424242;
+}
+
+hr.line{
+  width : 530px;
+  margin-left : 120px;
+  color :  #424242;
+}
+
+hr.line2{
+  width : 530px;
+  margin-left : 120px;
+  color: #FFBA94;
+}
+
+.review_img{
+ width : 170px;
+ height : 160px;
+ margin-left : 90px;
+ margin-top : 20px;
+}
+
+.featehr_img{
+ margin-left : 100px;
+}
