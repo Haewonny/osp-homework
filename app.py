@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+from werkzeug.utils import secure_filename
 import sys
 
 app = Flask(__name__)
@@ -7,11 +8,6 @@ app = Flask(__name__)
 @app.route("/")
 def hello():
     return render_template("index.html")
-
-
-@app.route("/register_restaurant")
-def reg_restaurant():
-    return render_template("register_restaurant.html")
 
 
 @app.route("/register_review")
@@ -34,17 +30,26 @@ def reg_review_post():
 def reg_reviewpost():
     return render_template("register_reviewpost.html")
 
-
-@app.route("/result")
-def reg_restaurant_submit_result():
-	data=request.form
-	return render_template("result.html", data=data)
+@app.route("/register_restaurant")
+def reg_restaurant():
+    rname = request.args.get("rname")
+    cate = request.args.get("cate")
+    park = request.args.get("park")
+    addr = request.args.get("addr")
+    tel = request.args.get("tel")
+    price1 = request.args.get("price1")
+    price2 = request.args.get("price2")
+    time = request.args.get("time")
+    site = request.args.get("site")
+    bestmenuname = request.args.get("bestmenuname")
+    bestmenuprice = request.args.get("bestmenuprice")
+    print(rname, cate, park, addr, tel, price1, price2, time, site, bestmenuname, bestmenuprice)
+    return render_template("register_restaurant.html")
 
 @app.route("/result", methods=['POST'])
-def reg_restaurant_submit_result_img():
-    image_file = request.files["file"]
-    image_file.save("static/image/{}".format(image_file.filename))
-    return render_template("result.html", image_file=image_file)
+def result_post():
+	data=request.form
+	return render_template("result.html", data=data)
 
 
 if __name__ == "__main__":
