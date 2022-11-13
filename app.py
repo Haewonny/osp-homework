@@ -39,18 +39,13 @@ def reg_reviewpost():
     return render_template("register_reviewpost.html")
 
 
-@app.route("/submit_restaurant")
-def reg_restaurant_submit():
-    name = request.args.get("name")
-    addr = request.args.get("addr")
-    tel = request.args.get("tel")
-    category = request.args.get("category")
-    park = request.args.get("park")
-    time = request.args.get("time")
-    site = request.args.get("site")
+@app.route("/submit_restaurant_post", methods=['POST'])
+def reg_restaurant_submit_post():
+	image_file = request.files["file"]
+	image_file.save("static/image/{}".format(image_file.filename))
+	data=request.form
+	return render_template("submit_restaurant_result.html", data=data)
 
-    print(name, addr, tel, category, park, time, site)
-    return render_template("register_restaurant.html")
 
 
 
