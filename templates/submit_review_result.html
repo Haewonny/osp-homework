@@ -5,29 +5,5 @@
     <title>Title</title>
 </head>
 <body>
-  <section>
-      <p>
-        restaurant name is {{data.name}} and address is {{data.addr}}
-      </p>
-      <p>
-        restaurant tel. is {{data.tel}} and category is {{data.category}}
-      </p>
-      <p>
-        Parking is
-        {% if data['park'] == "Y" %}
-        available
-        {% endif %}
-        {% if data['park'] == "N" %}
-        NOT available
-        {% endif %}
-        and Open/Close time is {{data.time}}
-      </p>
-    </section>
-    <form method="post" enctype="multipart/form-data" action="/submit_restaurant_post">
-        <div>
-            <label for="img">Representative Image upload : </label>
-            <input type="file" name="file" /><br><br>
-        </div>
-    </form>
 </body>
 </html>
