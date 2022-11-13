@@ -30,25 +30,21 @@ def reg_review_post():
     return render_template("register_reviewpost.html", data=data)
 
 
-@app.route("/result")
-def reg_result():
-    return render_template("result.html")
-
 @app.route("/register_reviewpost")
 def reg_reviewpost():
     return render_template("register_reviewpost.html")
 
 
-@app.route("/submit_restaurant_result", methods=['POST'])
+@app.route("/result")
 def reg_restaurant_submit_result():
-	image_file = request.files["file1"]
-	image_file.save("static/image/{}".format(image_file.filename))
-	image_file = request.files["file2"]
-	image_file.save("static/image/{}".format(image_file.filename))
 	data=request.form
-	return render_template("submit_restaurant_result.html", data=data)
+	return render_template("result.html", data=data)
 
-
+@app.route("/result", methods=['POST'])
+def reg_restaurant_submit_result_img():
+    image_file = request.files["file"]
+    image_file.save("static/image/{}".format(image_file.filename))
+    return render_template("result.html", image_file=image_file)
 
 
 if __name__ == "__main__":

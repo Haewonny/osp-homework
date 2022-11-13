@@ -14,16 +14,16 @@
 
                 <div class="column">
                     <div class="BOX">
-                        <form method="post" enctype="multipart/form-data" action="/submit_restaurant_result">
+                        <form method="post" enctype="multipart/form-data" action="/result">
                             <div>
                                 <label for="img1"></label>
-                                <input type="file" name="file1" id="img1"/>
+                                <input type="file" name="file1" id="img1" autocomplete="off" required/>
                             </div>
                         </form>
                     </div>
                 </div>
 
-                <form action="/submit_restaurant_result" method="post">
+                <form action="/result" method="post">
 
                 <div class="Line1">
                 <label class="Text1" for="rname">식당 이름 </label>
@@ -58,10 +58,10 @@
             <div class="bottomContainer">
                 <div class="text">대표 메뉴 등록하기</div>
                     <div class="addBox">
-                        <form method="post" enctype="multipart/form-data" action="/submit_restaurant_result">
+                        <form method="post" enctype="multipart/form-data" action="/result">
                             <div>
                                 <label for="img2"></label>
-                                <input type="file" name="file2" id="img2"/>
+                                <input type="file" name="file2" id="img2" autocomplete="off" required/>
                             </div>
                         </form>
                     </div>
