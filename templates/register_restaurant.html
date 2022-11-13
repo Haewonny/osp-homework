@@ -1,42 +1,70 @@
-<form action="/submit_restaurant" method="get">
-      <div>
-        <br /><br />
-        <label for="name">Restaurant name: </label>
-        <input type="text" name="name" id="name" required /><br /><br />
-      </div>
-      <div>
-        <label for="addr">Restaurant address: </label>
-        <input type="text" name="addr" id="addr" required /><br /><br />
-      </div>
-      <div>
-        <label for="tel">Restaurant Tel.: </label>
-        <input type="text" name="tel" id="tel" required /><br /><br />
-      </div>
-      <div>
-        <label for="category">Food category: </label>
-        <br />
-        <select id="category" name="category">
-          <option value="Korean" selected>Korean</option>
-          <option value="Chinese">Chinese</option>
-          <option value="Italian">Italian</option>
-          <option value="Japanese">Japanese</option></select
-        ><br /><br />
-      </div>
-      <div>
-        <label for="park">Parking (Y/N): </label>
-        <br />
-        <select id="park" name="park">
-          <option value="Y" selected>Yes</option>
-          <option value="N">No</option></select
-        ><br /><br />
-      </div>
-      <div>
-        <label for="time">Open/Close Time : </label>
-        <input type="text" name="time" id="time" /><br /><br />
-      </div>
-      <div>
-        <label for="site">Homepage URL : </label>
-        <input type="text" name="site" id="site" /><br /><br />
-      </div>
-      <div><input type="submit" value="Submit!" /><br /><br /></div>
-    </form>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>register restaurant</title>
+        <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/restaurantpost.css') }}"/>
+        <script src="{{ url_for('static', filename='JS/main.js') }}" defer></script>
+    </head>
+    <body>
+        <div class="postContainer">
+            <div class = "postRestaurantBG">
+                <div class="column">
+                    <div class="BOX">
+                    </div>
+                </div>
+                <form action="/submit_restaurant_post" method="post">
+
+                <div class="Line1">
+                <label class="Text1" for="rname">식당 이름 </label>
+                <input class="Write1" type="text" name="rname" id="rname" required/>
+                <label class="Text2" for="cate">카테고리 </label>
+                <input class="Write2" type="text" placeholder="일식" name="cate" id="cate" required/>
+                <label class="Text10" for="park">주차여부 </label>
+                <input class="Write10" type="text" placeholder="Y" name="park" id="park" required/>
+                </div>
+
+                <div class="Line2">
+                <label class="Text3" for="addr">주소 </label>
+                <input class="Write3" type="text" placeholder="정확한 주소를 입력해 주세요!" name="addr" id="addr" required/>
+                </div>
+
+               <div class="Line3">
+                <label class="Text4" for="tel">전화번호 </label>
+                <input class="Write4" type="text" placeholder="010-1234-5678" name="tel" id="tel" required/>
+                <label class="Text5" for="price1">가격대 </label>
+                <input class="Write5" type="text" placeholder="최저가" name="price1" id="price1" required/>
+                <label class="Text6" for="price2"></label>
+                <input class="Write6" type="text" placeholder="최고가" name="price2" id="price2" required/>
+                </div>
+
+               <div class="Line4">
+                <label class="Text7" for="time">영업시간 </label>
+                <input class="Write7" type="text" placeholder="09:00 ~ 21:00" name="time" id="time" required/>
+                <label class="Text8" for="site">사이트 </label>
+                <input class="Write8" type="text" placeholder="인스타그램, 대표 사이트" name="site" id="site" required/>
+                </div>
+
+            <div class="bottomContainer">
+                <div class="text">대표 메뉴 등록하기</div>
+                <div class="addBox"></div>
+                <div class="Line5">
+                    <label class="Text9" for="bestmenuname">메뉴명</label>
+                    <input class="Write9" type="text" name="bestmenuname" id="bestmenuname" required/>
+                </div>
+                <div class="Line6">
+                    <label class="Text10" for="bestmenuprice">가격</label>
+                    <input class="Write10" type="text" name="bestmenuprice" id="bestmenuprice" required/>
+                </div>
+
+                <div class="Wraps">
+                    <input class="buttonR" type='submit' value='등록하기'/>
+                </div>
+            </div>
+            </form>
+            </div>
+        </div>
+    </body>
+</html>
