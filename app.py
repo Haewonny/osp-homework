@@ -4,6 +4,7 @@ import sys
 
 app = Flask(__name__)
 
+
 @app.route("/")
 def hello():
     return render_template("index.html")
@@ -19,15 +20,17 @@ def reg_review():
     print(nickname, menu, star, content)
     return render_template("register_review.html")
 
+
 @app.route("/register_reviewpost", methods=['POST'])
 def reg_review_post():
-    data=request.form
-    return render_template("register_reviewpost.html", data=data)
+    data = request.form
+    return render_template("result_review.html", data=data)
 
 
 @app.route("/register_reviewpost")
 def reg_reviewpost():
-    return render_template("register_reviewpost.html")
+    return render_template("result_review.html")
+
 
 @app.route("/register_restaurant")
 def reg_restaurant():
@@ -46,6 +49,7 @@ def reg_restaurant():
     img2 = request.args.get("img2")
     print(rname, cate, park, addr, tel, price1, price2, time, site, bestmenuname, bestmenuprice)
     return render_template("register_restaurant.html")
+
 
 @app.route("/result", methods=['POST'])
 def result_post():
