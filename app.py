@@ -4,7 +4,6 @@ import sys
 
 app = Flask(__name__)
 
-
 @app.route("/")
 def hello():
     return render_template("index.html")
@@ -43,13 +42,19 @@ def reg_restaurant():
     site = request.args.get("site")
     bestmenuname = request.args.get("bestmenuname")
     bestmenuprice = request.args.get("bestmenuprice")
+    img1 = request.args.get("img1")
+    img2 = request.args.get("img2")
     print(rname, cate, park, addr, tel, price1, price2, time, site, bestmenuname, bestmenuprice)
     return render_template("register_restaurant.html")
 
 @app.route("/result", methods=['POST'])
 def result_post():
-	data=request.form
-	return render_template("result.html", data=data)
+    image_file1 = request.files["file1"]
+    image_file1.save("static/img/{}".format(image_file1.filename))
+    image_file2 = request.files["file2"]
+    image_file2.save("static/img/{}".format(image_file2.filename))
+    data = request.form
+    return render_template("result.html", data=data)
 
 
 if __name__ == "__main__":

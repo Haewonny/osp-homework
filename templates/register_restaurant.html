@@ -11,66 +11,61 @@
     <body>
         <div class="postContainer">
             <div class = "postRestaurantBG">
-
+                <form action="/result" method="post" enctype="multipart/form-data">
                 <div class="column">
                     <div class="BOX">
-                        <form method="post" enctype="multipart/form-data" action="/result">
                             <div>
                                 <label for="img1"></label>
-                                <input type="file" name="file" id="img1" autocomplete="off" required/>
+                                <input type="file" name="file1" id="img1"/>
                             </div>
-                        </form>
                     </div>
                 </div>
-                <form action="/result" method="post">
 
                 <div class="Line1">
                 <label class="Text1" for="rname">식당 이름 </label>
                 <input class="Write1" type="text" name="rname" id="rname" required/>
-                <label class="Text2" for="cate">카테고리 </label>
+                <label class="Text1" for="cate">카테고리 </label>
                 <input class="Write2" type="text" placeholder="일식" name="cate" id="cate" required/>
-                <label class="Text10" for="park">주차여부 </label>
+                <label class="Text1" for="park">주차여부 </label>
                 <input class="Write10" type="text" placeholder="Y" name="park" id="park" required/>
                 </div>
 
                 <div class="Line2">
-                <label class="Text3" for="addr">주소 </label>
+                <label class="Text1" for="addr">주소 </label>
                 <input class="Write3" type="text" placeholder="정확한 주소를 입력해 주세요!" name="addr" id="addr" required/>
                 </div>
 
                <div class="Line3">
-                <label class="Text4" for="tel">전화번호 </label>
+                <label class="Text1" for="tel">전화번호 </label>
                 <input class="Write4" type="text" placeholder="010-1234-5678" name="tel" id="tel" required/>
-                <label class="Text5" for="price1">가격대 </label>
+                <label class="Text1" for="price1">가격대 </label>
                 <input class="Write5" type="text" placeholder="최저가" name="price1" id="price1" required/>
-                <label class="Text6" for="price2"> ~ </label>
+                <label class="Text1" for="price2"> ~ </label>
                 <input class="Write6" type="text" placeholder="최고가" name="price2" id="price2" required/>
                 </div>
 
                <div class="Line4">
-                <label class="Text7" for="time">영업시간 </label>
+                <label class="Text1" for="time">영업시간 </label>
                 <input class="Write7" type="text" placeholder="09:00 ~ 21:00" name="time" id="time" required/>
-                <label class="Text8" for="site">사이트 </label>
+                <label class="Text1" for="site">사이트 </label>
                 <input class="Write8" type="text" placeholder="인스타그램, 대표 사이트" name="site" id="site" required/>
                 </div>
 
             <div class="bottomContainer">
                 <div class="text">대표 메뉴 등록하기</div>
                     <div class="addBox">
-                        <form method="post" enctype="multipart/form-data" action="/result">
                             <div>
                                 <label for="img2"></label>
-                                <input type="file" name="file" id="img2" autocomplete="off" required/>
+                                <input type="file" name="file2" id="img2"/>
                             </div>
-                        </form>
                     </div>
 
                 <div class="Line5">
-                    <label class="Text9" for="bestmenuname">메뉴명</label>
+                    <label class="Text1" for="bestmenuname">메뉴명</label>
                     <input class="Write9" type="text" name="bestmenuname" id="bestmenuname" required/>
                 </div>
                 <div class="Line6">
-                    <label class="Text10" for="bestmenuprice">가격</label>
+                    <label class="Text1" for="bestmenuprice">가격</label>
                     <input class="Write10" type="text" name="bestmenuprice" id="bestmenuprice" required/>
                 </div>
 
@@ -78,7 +73,6 @@
                     <input class="buttonR" type='submit' value='등록하기'/>
                 </div>
             </div>
-
             </form>
             </div>
         </div>
