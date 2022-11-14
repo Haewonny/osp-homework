@@ -24,6 +24,7 @@ def reg_review():
 @app.route("/register_reviewpost", methods=['POST'])
 def reg_review_post():
     data = request.form
+    print(data)
     return render_template("result_review.html", data=data)
 
 
@@ -58,6 +59,7 @@ def result_post():
     image_file2 = request.files["file2"]
     image_file2.save("static/img/{}".format(image_file2.filename))
     data = request.form
+    print(image_file1, image_file2, data)
     return render_template("result.html", data=data)
 
 
