@@ -54,6 +54,20 @@
     font-weight: 10px;
   }
 
+  .Line1, .Line2, .Line3, .Line4 {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    margin: 10px 8px 10px 0;
+  }
+
+.Line5, .Line6 {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    margin: 0 8px 10px 40%;
+}
+
   .Write1{
     border-radius: 8px;
     border-color: transparent;
@@ -78,7 +92,7 @@
   .Write3{
     border-radius: 8px;
     border-color: transparent;
-    width: 740px;
+    width: 1300px;
     height: 25px;
     font-family: 'Spoqa Han Sans Neo';
     font-weight: 10px;
