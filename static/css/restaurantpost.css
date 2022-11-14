@@ -1,7 +1,7 @@
 .postRestaurantBG{
     background: #FFF7EF;
     width: 100vw;
-    height: 100vh;
+    height: 120vh;
 }
 
 .postContainer {
@@ -38,7 +38,7 @@
     width: 282px;
     height: 43px;
     left: 1000px;
-    top: 400px;
+    top: 300px;
 
     font-family: 'Spoqa Han Sans Neo';
     font-style: normal;
@@ -221,15 +221,16 @@
 }
 
 .bottomContainer {
-    width: 900px;
-    height: 225px;
+    width: 600px;
+    height: 100px;
     margin-left: 40px;
     display: inline;
     padding: 60%;
     flex-direction: row;
+    top: 30%;
 }
 
 .addBox {
     margin-left:50%;
-    top: 10px;
+    top: 10000px;
 }
