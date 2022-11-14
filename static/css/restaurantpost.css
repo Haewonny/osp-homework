@@ -1,6 +1,6 @@
 .postRestaurantBG{
     background: #FFF7EF;
-    width: 100vw;
+    width: 120vw;
     height: 120vh;
 }
 
@@ -75,16 +75,7 @@
     line-height: 40px;
     font-family: 'Spoqa Han Sans Neo';
     font-weight: 10px;
-  }
-
-.Text2{
-    margin-top : 4px;
-    color: rgb(125, 125, 125);
-    font-size: 15px;
     font-weight: bold;
-    line-height: 40px;
-    font-family: 'Spoqa Han Sans Neo';
-    font-weight: 10px;
   }
 
 .Write1{
