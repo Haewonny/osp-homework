@@ -14,7 +14,7 @@
 
 .rvBox{
     width: 1400px;
-    height: 700px;
+    height: 600px;
     background: #FFFFFF;
     border-radius: 25px;
     position: absolute;
@@ -39,11 +39,12 @@
 }
 
 table.type1{
- width : 1220px;
+ width : 1400px;
  height : 80px;
  text-align : center;
  font-family: 'Spoqa Han Sans Neo';
- font-size : 18px;
+ font-size : 22px;
+ font-weight: bolder;
  color: #424242;
 }
 
@@ -59,15 +60,9 @@ table.type4.tr{
 
 
 hr.line{
-  width : 530px;
-  margin-left : 130px;
+  width : 1395px;
   color :  #424242;
-}
-
-hr.line2{
-  width : 530px;
-  margin-left : 100px;
-  color: #FFBA94;
+  position: absolute;
 }
 
 .review_img{

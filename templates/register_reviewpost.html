@@ -19,7 +19,6 @@
             <div class="rvBox">
                 <table class="type1">
                     <tr>
-                        <td>대표 메뉴</td>
                         <td>리뷰</td>
                     </tr>
                 </table>
@@ -27,9 +26,6 @@
                     <tr>
                         <td>
                             <hr class="line">
-                        </td>
-                        <td>
-                            <hr class="line2">
                         </td>
                     </tr>
                 </table>
@@ -41,7 +37,7 @@
                         <td width="200">
                             <img src="{{ url_for('static', filename='img/feather.jpg')}}" class="feather_img"/>
                             <p>{{data.nickname}}</p>
-                            <p>#별점</p>
+                            <p>#별점{{data.star}} </p>
                         </td>
                         <td>
                             {{data.content}}
@@ -52,9 +48,6 @@
                     <tr height="180">
                     </tr>
                 </table>
-                <div class="pagenum">
-                    1 2 3 4 5
-                </div>
             </div>
         </div>
     </div>
