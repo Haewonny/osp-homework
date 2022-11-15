@@ -31,36 +31,36 @@ li a {
 }
 
 .banner {
+  display: grid;
   background: #fff7ef;
   width: 100vw;
-  height: 45vh;
 }
 
 .banner_text1 {
+  display: grid;
   position: relative;
   font-style: normal;
   font-weight: 400;
   font-size: 28px;
-  line-height: 38px;
   text-align: center;
 
   color: #424242;
 
-  top: 20%;
+  margin: 3% 0 0 0;
 }
 
 .banner_text2 {
-  position: relative;
+  display: grid;
   font-style: normal;
   font-weight: 700;
   font-size: 50px;
-  line-height: 77px;
   /* identical to box height */
 
   text-align: center;
-
+  margin: 2% 0 3% 0;
   color: #424242;
 }
+
 
 .title {
   display: grid;
