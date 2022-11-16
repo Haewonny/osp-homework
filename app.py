@@ -73,9 +73,9 @@ def reg_menu():
 def reg_restaurant_submit_post():
     global idx
     image_file=request.files["file"]
-    image_file.save("static/image/{}".format(image_file.filename))
+    image_file.save("static/img/{}".format(image_file.filename))
     data=request.form
-    if DB.insert_restaurant(data['name'], data, image_file.filename):
+    if DB.insert_restaurant(data['rname'], data, image_file.filename):
         return render_template("result.html", data=data, image_path="static/img/" + image_file.filename)
     else:
         return "이미 등록된 가게입니다."
