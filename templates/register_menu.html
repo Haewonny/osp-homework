@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>register_menu</title>
+    <script src="{{ url_for('static', filename='JS/main.js') }}" defer></script>
+</head>
+<body>
+    <form action="/result" method="post" enctype="multipart/form-data">
+        <div><br><br>
+            <label class="Text1" for="name">식당이름 : {{data.rname}}</label>
+            <input type="hidden" id="name" required/>
+            <br><br>
+        </div>
+        <div><br><br>
+            <label class="Text1" for="menu">메뉴명</label>
+            <input class = "Write1" type="text" name="menu" id="menu" required/>
+            <label class="Text1" for="price">가격</label>
+            <input class = "Write2" type="text" name="price" id="price" required/>
+            <label class="Text1" for="allergy">알러지 정보</label>
+            <input class = "Write3" type="text" name="allergy" id="allergy" required/>
+            <br><br>
+        </div>
+        <div>
+            <label for="img">음식 사진 업로드</label>
+            <input type="file" name="file" id="img"/><br><br>
+        </div>
+        <div>
+            <input type="submit" value="메뉴 등록"><br><br>
+        </div>
+    </form>
+</body>
+</html>

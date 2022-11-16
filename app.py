@@ -1,9 +1,10 @@
 from flask import Flask, render_template, request
-from werkzeug.utils import secure_filename
+from database import DBhandler
 import sys
 
 app = Flask(__name__)
 
+DB = DBhandler()
 
 @app.route("/")
 def hello():
@@ -61,6 +62,23 @@ def result_post():
     data = request.form
     print(image_file1, image_file2, data)
     return render_template("result.html", data=data)
+
+@app.route("/register_menu", methods=['POST'])
+def reg_menu():
+    data=request.form
+    print(data)
+    return render_template("register_menu.html", data=data)
+
+@app.route("/result", methods=['POST'])
+def reg_restaurant_submit_post():
+    global idx
+    image_file=request.files["file"]
+    image_file.save("static/image/{}".format(image_file.filename))
+    data=request.form
+    if DB.insert_restaurant(data['name'], data, image_file.filename):
+        return render_template("result.html", data=data, image_path="static/img/" + image_file.filename)
+    else:
+        return "이미 등록된 가게입니다."
 
 
 if __name__ == "__main__":

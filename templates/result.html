@@ -12,13 +12,18 @@
         주차여부 : {{data.park}} <br>
         식당 주소 : {{data.addr}} <br>
         전화번호 : {{data.tel}} <br>
-        가격대 : {{data.price1}} ~ {{data.price2}} <br>
+        가격대 : {{data.price1}} ~ {{data.price2}}<br>
         영업시간 : {{data.time}} <br>
         사이트 : {{data.site}} <br>
-        <br><br>
-        BESTMENU RESULT <br>
-        대표메뉴명 : {{data.bestmenuname}} <br>
-        대표메뉴 가격 : {{data.bestmenuprice}} <br>
+        <img src="{{image_path}}" alt="My Image">
+
+        <form method="post" action="/register_menu">
+            <input type="hidden" name="restaurant_name" value="{{data.name}}">
+            <div>
+                <p>{{data.rname}}의 메뉴를 동록하시려면 아래 버튼을 클릭해주세요.</p>
+                <button type="submit" name="menu">메뉴 등록</button><br><br>
+            </div>
+        </form>
     </section>
 </body>
 </html>
