@@ -1,9 +1,9 @@
 {
-  "apiKey": "AIzaSyA-KRzg-rTm7kS7RdGhURO2BUMX5wgxphM",
-  "authDomain": "comong-4a580.firebaseapp.com",
+  "apiKey": "AIzaSyChSE-K4NMtXBEfQDnixGxC-o-lcvKRRpA",
+  "authDomain": "comong-hw.firebaseapp.com",
   "databaseURL": "https://comong-hw-default-rtdb.firebaseio.com",
-  "projectId": "comong-4a580",
-  "storageBucket": "comong-4a580.appspot.com",
-  "messagingSenderId": "222765280552",
-  "appId": "1:222765280552:web:74903876cd0b61c08bf41d"
+  "projectId": "comong-hw",
+  "storageBucket": "comong-hw.appspot.com",
+  "messagingSenderId": "441244773046",
+  "appId": "1:441244773046:web:3a288bfe86494e8594d417"
 }

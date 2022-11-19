@@ -7,7 +7,7 @@
 <body>
     <section>
         RESULT <br>
-        식당이름 : {{data.rname}} <br>
+        식당이름 : {{data.name}} <br>
         카테고리 : {{data.cate}} <br>
         주차여부 : {{data.park}} <br>
         식당 주소 : {{data.addr}} <br>
@@ -18,9 +18,9 @@
         <img src="{{image_path}}" alt="My Image">
 
         <form method="post" action="/register_menu">
-            <input type="hidden" name="restaurant_name" value="{{data.rname}}">
+            <input type="hidden" name="restaurant_name" value="{{data.name}}">
             <div>
-                <p>{{data.rname}}의 메뉴를 동록하시려면 아래 버튼을 클릭해주세요.</p>
+                <p>{{data.name}}의 메뉴를 등록하시려면 아래 버튼을 클릭해주세요.</p>
                 <button type="submit" name="menu">메뉴 등록</button><br><br>
             </div>
         </form>
