@@ -1,227 +1,225 @@
-.postRestaurantBG{
-    background: #FFF7EF;
-    width: 120vw;
-    height: 120vh;
-}
-
-.postContainer {
-  float: left;
-  width: 100vw;
-  height: 60px;
-  float: left;
-  background: white;
-}
-
-.BOX{
-    width: 450px;
-    height: 450px;
-    background: #FFFFFF;
-    border-radius: 25px;
-  }
-
-.column{
-    flex-direction: column;
-    justify-items: center;
-    float: left;
-    margin: 150px;
-    width: 450px;
-    height: 503px;
-  }
-
-.info{
-    margin: 150px;
-    width: 1200px;
-  }
-
-.text {
-    position: absolute;
-    width: 282px;
-    height: 43px;
-    left: 1000px;
-    top: 300px;
-
-    font-family: 'Spoqa Han Sans Neo';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 43px;
-    text-align: center;
-
-    color: #FFBA94;
-}
-
-
-
-.Line1, .Line2, .Line3, .Line4 {
-    display: flex;
-    flex-direction:row;
-    justify-content: space-between;
-    margin: 10px 8px 10px 0;
-    padding: 1px 1px 1px 1px;
-  }
-
-.Line5, .Line6 {
-    display: flex;
-    flex-direction:row;
-    justify-content: space-between;
-    margin: 0 8px 10px 40%;
-}
-
-.TextI{
-    margin: 50% 5% 0 5%;
-    color: rgb(125, 125, 125);
-    font-size: 15px;
-    font-weight: bold;
-    line-height: 40px;
-    font-family: 'Spoqa Han Sans Neo';
-    font-weight: 10px;
-    font-weight: bold;
-  }
-
-.Write1{
-    border-radius: 8px;
-    border-color: transparent;
-    width: 220px;
-    height: 30px;
-    resize: none;
-    font-family: 'Spoqa Han Sans Neo';
-    font-weight: 10px;
-    text-align: left;
-  }
-
-.Write2{
-    border-radius: 8px;
-    border-color: transparent;
-    width: 145px;
-    height: 30px;
-    font-family: 'Spoqa Han Sans Neo';
-    font-weight: 10px;
-    text-align: center;
-  }
-
-.Write3{
-    border-radius: 8px;
-    border-color: transparent;
-    width: 740px;
-    height: 30px;
-    font-family: 'Spoqa Han Sans Neo';
-    font-weight: 10px;
-    text-align: center;
-  }
-
-.Write4{
-    border-radius: 8px;
-    border-color: transparent;
-    width: 286px;
-    height: 30px;
-    font-family: 'Spoqa Han Sans Neo';
-    font-weight: 10px;
-    text-align: center;
-  }
-
-.Write5, .Write6{
-    border-radius: 8px;
-    border-color: transparent;
-    width: 121px;
-    height: 30px;
-    font-family: 'Spoqa Han Sans Neo';
-    font-weight: 10px;
-    text-align: center;
-  }
-
-.Write7{
-    border-radius: 8px;
-    border-color: transparent;
-    width: 212px;
-    height: 30px;
-    font-family: 'Spoqa Han Sans Neo';
-    font-weight: 10px;
-    text-align: center;
-  }
-
-.Write8{
-    border-radius: 8px;
-    border-color: transparent;
-    width: 394px;
-    height: 30px;
-    font-family: 'Spoqa Han Sans Neo';
-    font-weight: 10px;
-    text-align: center;
-  }
-
-.Write9{
-    border-radius: 8px;
-    border-color: transparent;
-    width: 221px;
-    height: 30px;
-    font-family: 'Spoqa Han Sans Neo';
-    font-weight: 10px;
-    text-align: center;
-  }
-
-.Write10{
-    border-radius: 8px;
-    border-color: transparent;
-    width: 145px;
-    height: 30px;
-    font-family: 'Spoqa Han Sans Neo';
-    font-weight: 10px;
-    text-align: center;
-  }
-
-.Write11{
-    border-radius: 8px;
-    border-color: transparent;
-    width: 43px;
-    height: 30px;
-    font-family: 'Spoqa Han Sans Neo';
-    font-weight: 10px;
-    text-align: center;
-  }
-
-.postContainer{
+.BG {
+  display: grid;
   background: #fff7ef;
-  display: flex;
-  height: 90%;
-  width: 100%;
-  z-index: 3;
-  scroll-snap-align: start;
-  }
-
-.buttonR{
-    background-color: #ffa574;
-    color: white;
-    font-family: 'Spoqa Han Sans Neo';
-    font-style: normal;font-weight: 700;
-    font-size: 20px;
-    font-size: 14px;
-    padding: 10px 25px;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
-  }
-
-.Wraps{
-    text-align: center;
-    margin: 30px auto;
-  }
-
-.buttonR:hover{
-  background-color: #FAD4B2;
+  height: 100vh;
+  width: 100vw;
 }
 
-.bottomContainer {
-    width: 600px;
-    height: 100px;
-    margin-left: 40px;
-    display: inline;
-    padding: 60%;
-    flex-direction: row;
-    top: 30%;
+.container{
+  display: grid;
+  margin: 7%;
+}
+
+.container2{
+  display: grid;
+  margin: 3%;
+}
+.BOX {
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  border-radius: 25px;
 }
 
 .addBox {
-    margin-left:50%;
-    top: 10000px;
+  width: 200px;
+  height: 200px;
+  background: #ffffff;
+  border-radius: 10px;
+  margin-left: 48%;
+  margin-top: 8%;
+}
+
+.column {
+  flex-direction: column;
+  float: left;
+  margin: 15px 3% 0 15px;
+  width: 25%;
+  height: 50%;
+}
+
+.text {
+  position: absolute;
+  width: 282px;
+  height: 43px;
+  left: 800px;
+  top: 220px;
+
+  font-family: 'Spoqa Han Sans Neo';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 43px;
+  text-align: center;
+
+  color: #ffba94;
+}
+
+.Text1 {
+  color: rgb(125, 125, 125);
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 40px;
+  font-family: 'Spoqa Han Sans Neo';
+  font-weight: 10px;
+  margin: 0 20px 0 10px;
+}
+
+.Line1,
+.Line2,
+.Line3,
+.Line4 {
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px 8px 10px 0;
+}
+
+.Write1 {
+  border-radius: 8px;
+  border-color: transparent;
+  width: 100px;
+  height: 25px;
+  resize: none;
+  font-family: 'Spoqa Han Sans Neo';
+  font-weight: 10px;
+}
+
+.Write2 {
+  border-radius: 8px;
+  border-color: transparent;
+  width: 145px;
+  height: 25px;
+  font-family: 'Spoqa Han Sans Neo';
+  font-weight: 10px;
+  text-align: center;
+}
+
+.Write3 {
+  border-radius: 8px;
+  border-color: transparent;
+  width: 500px;
+  height: 25px;
+  font-family: 'Spoqa Han Sans Neo';
+  font-weight: 10px;
+  text-align: center;
+}
+
+.Write4 {
+  border-radius: 8px;
+  border-color: transparent;
+  width: 286px;
+  height: 25px;
+  font-family: 'Spoqa Han Sans Neo';
+  font-weight: 10px;
+  text-align: center;
+}
+
+.Write5,
+.Write6 {
+  border-radius: 8px;
+  border-color: transparent;
+  width: 121px;
+  height: 25px;
+  font-family: 'Spoqa Han Sans Neo';
+  font-weight: 10px;
+  text-align: center;
+}
+
+.Write7 {
+  border-radius: 8px;
+  border-color: transparent;
+  width: 212px;
+  height: 25px;
+  font-family: 'Spoqa Han Sans Neo';
+  font-weight: 10px;
+  text-align: center;
+}
+
+.Write8 {
+  border-radius: 8px;
+  border-color: transparent;
+  width: 394px;
+  height: 25px;
+  font-family: 'Spoqa Han Sans Neo';
+  font-weight: 10px;
+  text-align: center;
+}
+
+.Write9 {
+  float: left;
+  border-radius: 8px;
+  border-color: transparent;
+  width: 221px;
+  height: 25px;
+  font-family: 'Spoqa Han Sans Neo';
+  font-weight: 10px;
+}
+
+.Write10 {
+  border-radius: 8px;
+  border-color: transparent;
+  width: 145px;
+  height: 25px;
+  font-family: 'Spoqa Han Sans Neo';
+  font-weight: 10px;
+  text-align: left;
+}
+
+.Write11 {
+  border-radius: 8px;
+  border-color: transparent;
+  width: 43px;
+  height: 25px;
+  font-family: 'Spoqa Han Sans Neo';
+  font-weight: 10px;
+  text-align: center;
+}
+
+.textArea {
+  width: 590px;
+  height: 250px;
+  border: none;
+  border-radius: 8px;
+  resize: none;
+  font-family: 'Spoqa Han Sans Neo';
+  font-weight: 10px;
+}
+
+.File {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  position: absolute;
+  margin: 200px;
+}
+
+.Wrap {
+  display: flex;
+  flex-direction: row;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.buttonR {
+  background-color: #ffa574;
+  color: white;
+  font-family: 'Spoqa Han Sans Neo';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  font-size: 14px;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.Wraps {
+  text-align: center;
+  margin: 30px auto;
+}
+
+.buttonR:hover {
+  background-color: #fad4b2;
 }

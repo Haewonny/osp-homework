@@ -1,64 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>register restaurant</title>
-        <link rel="stylesheet"
-        href="{{ url_for('static', filename='css/newreview.css') }}"/>
-        <script src="{{ url_for('static', filename='JS/main.js') }}" defer></script>
-    </head>
-    <body>
-        <div class="postContainer">
-            <div class = "postRestaurantBG">
-                <form action="/result" method="post" enctype="multipart/form-data">
-                    <div class="column">
-                        <div class="BOX">
-                            <div>
-                                <label for="img1"></label>
-                                <input type="file" name="file" id="img1"/>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="topContainer">
-                        <div class="Line1">
-                            <label class="Text1" for="name">식당이름</label>
-                        <input class = "Write3" type="text" name="name" id="name" required/>
-                        <label class="Text1" for="cate">카테고리 </label>
-                        <input class="Write2" type="text" placeholder="일식" name="cate" id="cate" required/>
-                        <label class="Text1" for="park">주차여부 </label>
-                        <input class="Write11" type="text" placeholder="Y" name="park" id="park" required/>
-                    </div>
-
-
-                    <div class="Line2">
-                        <label class="Text1" for="addr">주소 </label>
-                        <input class="Write3" type="text" placeholder="정확한 주소를 입력해 주세요!" name="addr" id="addr" required/>
-                    </div>
-
-                    <div class="Line3">
-                        <label class="Text1" for="tel">전화번호 </label>
-                        <input class="Write4" type="text" placeholder="010-1234-5678" name="tel" id="tel" required/>
-                        <label class="Text1" for="price1">가격대 </label>
-                        <input class="Write5" type="text" placeholder="최저가" name="price1" id="price1" required/>
-                        <label class="Text1" for="price2"> ~ </label>
-                        <input class="Write6" type="text" placeholder="최고가" name="price2" id="price2" required/>
-                    </div>
-
-                    <div class="Line4">
-                        <label class="Text1" for="time">영업시간 </label>
-                        <input class="Write7" type="text" placeholder="09:00 ~ 21:00" name="time" id="time" required/>
-                        <label class="Text1" for="site">사이트 </label>
-                        <input class="Write8" type="text" placeholder="인스타그램, 대표 사이트" name="site" id="site" required/>
-                    </div>
-                </div>
-
-                <div class="Wraps">
-                    <input class="buttonR" type='submit' value='메뉴등록'/>
-                </div>
-            </form>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>register restaurant</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/restaurantpost.css') }}"
+    />
+    <script src="{{ url_for('static', filename='JS/main.js') }}" defer></script>
+  </head>
+  <body>
+    <div class="BG">
+      <div class="container">
+        <form action="/result" method="post" enctype="multipart/form-data">
+          <div class="column">
+            <div class="BOX">
+              <div>
+                <label for="img1"></label>
+                <input type="file" name="file" id="img1" />
+              </div>
             </div>
-        </div>
+          </div>
+          <div class="container2">
+            <div class="Line1">
+              <label class="Text1" for="name">식당이름</label>
+              <input
+                class="Write3"
+                type="text"
+                name="name"
+                id="name"
+                required
+              />
+              <label class="Text1" for="cate">카테고리</label>
+              <input
+                class="Write2"
+                type="text"
+                placeholder="일식"
+                name="cate"
+                id="cate"
+                required
+              />
+              <label class="Text1" for="park">주차여부</label>
+              <input
+                class="Write11"
+                type="text"
+                placeholder="Y"
+                name="park"
+                id="park"
+                required
+              />
+            </div>
 
-    </body>
+            <div class="Line2">
+              <label class="Text1" for="addr">주소</label>
+              <input
+                class="Write3"
+                type="text"
+                placeholder="정확한 주소를 입력해 주세요!"
+                name="addr"
+                id="addr"
+                required
+              />
+            </div>
+
+            <div class="Line3">
+              <label class="Text1" for="tel">전화번호</label>
+              <input
+                class="Write4"
+                type="text"
+                placeholder="010-1234-5678"
+                name="tel"
+                id="tel"
+                required
+              />
+              <label class="Text1" for="price1">가격대</label>
+              <input
+                class="Write5"
+                type="text"
+                placeholder="최저가"
+                name="price1"
+                id="price1"
+                required
+              />
+              <label class="Text1" for="price2">~</label>
+              <input
+                class="Write6"
+                type="text"
+                placeholder="최고가"
+                name="price2"
+                id="price2"
+                required
+              />
+            </div>
+
+            <div class="Line4">
+              <label class="Text1" for="time">영업시간</label>
+              <input
+                class="Write7"
+                type="text"
+                placeholder="09:00 ~ 21:00"
+                name="time"
+                id="time"
+                required
+              />
+              <label class="Text1" for="site">사이트</label>
+              <input
+                class="Write8"
+                type="text"
+                placeholder="인스타그램, 대표 사이트"
+                name="site"
+                id="site"
+                required
+              />
+            </div>
+            <div class="Wraps">
+              <input class="buttonR" type="submit" value="메뉴등록" />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
 </html>
