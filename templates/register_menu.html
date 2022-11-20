@@ -26,7 +26,14 @@
                 <input type="file" name="file" id="img"/><br><br>
             </div>
             <div>
-                <input type="submit" value="메뉴 등록"><br><br>
+                <input type="submit" value="메뉴 등록">
+                <br><br>
+            </div>
+        </form>
+        <form method="post" action="/register_bestmenu">
+            <input type="hidden" name="restaurant_name" value="{{data.restaurant_name}}">
+            <div>
+                <button type="submit" name="menu">대표 메뉴 등록</button><br><br>
             </div>
         </form>
     </body>

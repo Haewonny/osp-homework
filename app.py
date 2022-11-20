@@ -63,11 +63,16 @@ def reg_menu():
     print(data)
     return render_template("register_menu.html", data=data)
 
-@app.route("/register_bestmenu", methods=['POST','GET'])
-def reg_bestmenu():
+
+
+@app.route("/register_bestmenu", methods=['POST'])
+def reg_best_menu():
     data = request.form
     print(data)
     return render_template("register_bestmenu.html", data=data)
+
+
+
 
 @app.route("/result", methods=['POST'])
 def reg_restaurant_submit_post():
