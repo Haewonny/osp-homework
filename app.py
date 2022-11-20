@@ -24,9 +24,14 @@ def reg_review():
 
 @app.route("/register_reviewpost", methods=['POST'])
 def reg_review_post():
+    global idx
     data = request.form
+
+    DB.insert_review(data['nickname'], data)
+
     print(data)
     return render_template("result_review.html", data=data)
+
 
 
 @app.route("/register_reviewpost")

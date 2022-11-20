@@ -33,3 +33,13 @@ class DBhandler:
             if res.key() == name:
                 return False
         return True
+
+    def insert_review(self, nickname, data):
+        review_info = {
+            "menu": data['menu'],
+            "star": data['star'],
+            "content": data['content']
+        }
+        self.db.child("review").child(nickname).set(review_info)
+        print(data)
+        return True
