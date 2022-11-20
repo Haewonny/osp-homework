@@ -57,6 +57,12 @@ def result_post():
     print(image_file, data)
     return render_template("result.html", data=data)
 
+@app.route("/register_menu", methods=['POST'])
+def reg_menu():
+    data = request.form
+    print(data)
+    return render_template("register_menu.html", data=data)
+
 @app.route("/register_bestmenu", methods=['POST','GET'])
 def reg_bestmenu():
     data = request.form
@@ -71,7 +77,7 @@ def reg_restaurant_submit_post():
     data = request.form
 
     if DB.insert_restaurant(data['name'], data, image_file.filename):
-        return render_template("result.html", data=data, image_path="static/img/" + image_file.filename)
+        return render_template("result.html", data=data, img_path="static/img/" + image_file.filename)
     else:
         return "이미 등록된 가게입니다."
 
