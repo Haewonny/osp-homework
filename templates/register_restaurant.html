@@ -12,17 +12,17 @@
         <div class="postContainer">
             <div class = "postRestaurantBG">
                 <form action="/result" method="post" enctype="multipart/form-data">
-                <div class="column">
-                    <div class="BOX">
+                    <div class="column">
+                        <div class="BOX">
                             <div>
                                 <label for="img1"></label>
                                 <input type="file" name="file" id="img1"/>
                             </div>
+                        </div>
                     </div>
-                </div>
-                <div class="topContainer">
-                    <div class="Line1">
-                        <label class="Text1" for="name">식당이름</label>
+                    <div class="topContainer">
+                        <div class="Line1">
+                            <label class="Text1" for="name">식당이름</label>
                         <input class = "Write3" type="text" name="name" id="name" required/>
                         <label class="Text1" for="cate">카테고리 </label>
                         <input class="Write2" type="text" placeholder="일식" name="cate" id="cate" required/>
@@ -31,34 +31,28 @@
                     </div>
 
 
-                <div class="Line2">
-                <label class="Text1" for="addr">주소 </label>
-                <input class="Write3" type="text" placeholder="정확한 주소를 입력해 주세요!" name="addr" id="addr" required/>
+                    <div class="Line2">
+                        <label class="Text1" for="addr">주소 </label>
+                        <input class="Write3" type="text" placeholder="정확한 주소를 입력해 주세요!" name="addr" id="addr" required/>
+                    </div>
+
+                    <div class="Line3">
+                        <label class="Text1" for="tel">전화번호 </label>
+                        <input class="Write4" type="text" placeholder="010-1234-5678" name="tel" id="tel" required/>
+                        <label class="Text1" for="price1">가격대 </label>
+                        <input class="Write5" type="text" placeholder="최저가" name="price1" id="price1" required/>
+                        <label class="Text1" for="price2"> ~ </label>
+                        <input class="Write6" type="text" placeholder="최고가" name="price2" id="price2" required/>
+                    </div>
+
+                    <div class="Line4">
+                        <label class="Text1" for="time">영업시간 </label>
+                        <input class="Write7" type="text" placeholder="09:00 ~ 21:00" name="time" id="time" required/>
+                        <label class="Text1" for="site">사이트 </label>
+                        <input class="Write8" type="text" placeholder="인스타그램, 대표 사이트" name="site" id="site" required/>
+                    </div>
                 </div>
 
-               <div class="Line3">
-                <label class="Text1" for="tel">전화번호 </label>
-                <input class="Write4" type="text" placeholder="010-1234-5678" name="tel" id="tel" required/>
-                <label class="Text1" for="price1">가격대 </label>
-                <input class="Write5" type="text" placeholder="최저가" name="price1" id="price1" required/>
-                <label class="Text1" for="price2"> ~ </label>
-                <input class="Write6" type="text" placeholder="최고가" name="price2" id="price2" required/>
-                </div>
-
-               <div class="Line4">
-                <label class="Text1" for="time">영업시간 </label>
-                <input class="Write7" type="text" placeholder="09:00 ~ 21:00" name="time" id="time" required/>
-                <label class="Text1" for="site">사이트 </label>
-                <input class="Write8" type="text" placeholder="인스타그램, 대표 사이트" name="site" id="site" required/>
-                </div>
-             </div>
-
-             <a href="/register_bestmenu">대표 메뉴 등록하기</a>
-             <input class="buttonR" type='submit' value='대표메뉴등록하기'/>
-             <form method="post" action="http://0.0.0.0/register_menu">
-	                <input type="text" name="name" value="" placeholder="input your name here">
-	                <input type="submit">
-            </form>
                 <div class="Wraps">
                     <input class="buttonR" type='submit' value='메뉴등록'/>
                 </div>
