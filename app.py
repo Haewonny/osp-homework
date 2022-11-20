@@ -57,11 +57,11 @@ def result_post():
     print(image_file, data)
     return render_template("result.html", data=data)
 
-@app.route("/register_menu", methods=['POST'])
-def reg_menu():
+@app.route("/register_bestmenu", methods=['POST','GET'])
+def reg_bestmenu():
     data = request.form
     print(data)
-    return render_template("register_menu.html", data=data)
+    return render_template("register_bestmenu.html", data=data)
 
 @app.route("/result", methods=['POST'])
 def reg_restaurant_submit_post():

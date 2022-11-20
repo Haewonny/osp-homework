@@ -5,7 +5,7 @@
 }
 
 .postContainer {
-  display: inline;
+  float: left;
   width: 100vw;
   height: 60px;
   float: left;
