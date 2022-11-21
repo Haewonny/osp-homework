@@ -34,9 +34,11 @@ class DBhandler:
                 return False
         return True
 
-    def insert_bestmenu(self, bestmenuname, data):
+    def insert_bestmenu(self, bestmenuname, data, img_path):
         bestmenu_info = {
-            "bestmenuprice": data['bestmenuprice']
+            "restaurant_name": data['restaurant_name'],
+            "bestmenuprice": data['bestmenuprice'],
+            "img_path": img_path
         }
         self.db.child("bestmenu").child(bestmenuname).set(bestmenu_info)
         print(data)
