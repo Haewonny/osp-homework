@@ -77,6 +77,11 @@ def reg_restaurant_submit_post():
     data=request.form
     return render_template("result.html", data=data)
 
+@app.route("/submit_bestmenu_post", methods=['POST'])
+def submit_bestmenu_post():
+    data = request.form
+    print(data)
+    return render_template("index.html", data=data)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
