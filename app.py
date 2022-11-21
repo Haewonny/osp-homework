@@ -93,7 +93,7 @@ def submit_bestmenu_post():
     image_file = request.files["file"]
     image_file.save("static/img/{}".format(image_file.filename))
     data = request.form
-    DB.insert_bestmenu(data['bestmenuname'],data,image_file.filename)
+    DB.insert_bestmenu(data['restaurant_name'],data,image_file.filename)
     return render_template("index.html")
 
 
