@@ -21,13 +21,12 @@
         <div class="text">영업시간 : {{data.time}}</div>
         <div class="text">사이트 : {{data.site}}</div>
 
-        <img src="{{img_path}}" alt="My Image">
+        <img src="{{image_path}}" alt="My Image">
 
         <form method="post" action="/register_menu">
             <input type="hidden" name="restaurant_name" value="{{data.name}}">
             <div>
                 <p>{{data.name}}의 메뉴를 등록하시려면 아래 버튼을 클릭해주세요.</p>
-                <button type="submit" name="menu">메뉴 등록</button><br><br>
             </div>
         </form>
         <form method="post" action="/register_bestmenu">

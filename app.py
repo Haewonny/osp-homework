@@ -83,7 +83,7 @@ def reg_restaurant_submit_post():
     image_file.save("static/img/{}".format(image_file.filename))
     data=request.form
     if DB.insert_restaurant(data['name'], data, image_file.filename):
-        return render_template("result.html", data=data, img_path="static/image/"+image_file.filename)
+        return render_template("result.html", data=data, image_path="./static/img/"+image_file.filename)
     else:
         return "이미 등록된 가게입니다!"
 
