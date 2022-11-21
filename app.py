@@ -75,6 +75,7 @@ def reg_best_menu():
     return render_template("register_bestmenu.html", data=data)
 
 
+
 @app.route("/submit_restaurant_post", methods=['POST'])
 def reg_restaurant_submit_post():
     global idx

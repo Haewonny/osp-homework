@@ -8,7 +8,6 @@ class DBhandler:
         firebase = pyrebase.initialize_app(config)
         self.db = firebase.database()
 
-
     def insert_restaurant(self, name, data, img_path):
         restaurant_info = {
             "cate": data['cate'],
