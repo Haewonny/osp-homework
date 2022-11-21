@@ -81,7 +81,10 @@ def reg_restaurant_submit_post():
     image_file = request.files["file"]
     image_file.save("static/img/{}".format(image_file.filename))
     data=request.form
-    return render_template("result.html", data=data)
+    if DB.insert_restaurant(data['name'], data, image_file.filename):
+        return render_template("result.html", data=data, img_path="static/image/"+image_file.filename)
+    else:
+        return "이미 등록된 가게입니다!"
 
 @app.route("/submit_bestmenu_post", methods=['POST'])
 def submit_bestmenu_post():

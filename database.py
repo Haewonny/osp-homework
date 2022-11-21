@@ -8,6 +8,7 @@ class DBhandler:
         firebase = pyrebase.initialize_app(config)
         self.db = firebase.database()
 
+
     def insert_restaurant(self, name, data, img_path):
         restaurant_info = {
             "cate": data['cate'],
@@ -26,7 +27,6 @@ class DBhandler:
             return True
         else:
             return False
-
 
     def restaurant_duplicate_check(self, name):
         restaurants = self.db.child("restaurant").get()
