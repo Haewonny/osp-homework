@@ -60,7 +60,13 @@ def reg_menu():
     print(data)
     return render_template("register_menu.html", data=data)
 
-
+@app.route("/register_bestmenu")
+def reg_bestmenu():
+    restaurant_name = request.args.get("restaurant_name")
+    bestmenuname = request.args.get("bestmenuname")
+    bestmenuprice = request.args.get("bestmenuprice")
+    print(restaurant_name,bestmenuname,bestmenuprice)
+    return render_template("register_bestmenu.html")
 
 @app.route("/register_bestmenu", methods=['POST'])
 def reg_best_menu():
