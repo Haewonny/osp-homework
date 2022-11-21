@@ -27,6 +27,7 @@ class DBhandler:
         else:
             return False
 
+
     def restaurant_duplicate_check(self, name):
         restaurants = self.db.child("restaurant").get()
         for res in restaurants.each():
