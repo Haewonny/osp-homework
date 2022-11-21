@@ -23,3 +23,23 @@
   font-weight: 10px;
   margin: 0 20px 0 30px;
 }
+
+.buttonR {
+  background-color: #ffa574;
+  color: white;
+  font-family: 'Spoqa Han Sans Neo';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  font-size: 14px;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  margin: 10px 20px 0 30px;
+}
+
+.buttonR:hover {
+  background-color: #fad4b2;
+}
