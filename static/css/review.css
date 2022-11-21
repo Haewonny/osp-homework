@@ -117,14 +117,6 @@
     font-weight: 10px;
   }
 
-  .File{
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    position: absolute;
-    margin: 200px;
-  }
-  
   .postContainer{
   background: #fff7ef;
   display: flex;
@@ -145,7 +137,7 @@
     background-color: #ffa574;
     color: white;
     font-family: 'Spoqa Han Sans Neo';
-    font-style: normal;font-weight: 700;  
+    font-style: normal;font-weight: 700;
     font-size: 20px;
     font-size: 14px;
     padding: 10px 25px;
@@ -162,4 +154,4 @@
 
 .buttonR:hover{
   background-color: #FAD4B2;
-}
+  }

@@ -45,12 +45,13 @@ class DBhandler:
         print(data,img_path)
         return True
 
-    def insert_review(self, nickname, data):
+    def insert_review(self, nickname, data, img_path):
         review_info = {
             "menu": data['menu'],
             "star": data['star'],
-            "content": data['content']
+            "content": data['content'],
+            "img_path": img_path
         }
         self.db.child("review").child(nickname).set(review_info)
-        print(data)
+        print(data, img_path)
         return True

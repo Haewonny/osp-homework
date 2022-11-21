@@ -25,18 +25,13 @@ def reg_review():
 @app.route("/register_reviewpost", methods=['POST'])
 def reg_review_post():
     global idx
+    image_file = request.files["file"]
+    image_file.save("static/img/{}".format(image_file.filename))
     data = request.form
 
-    DB.insert_review(data['nickname'], data)
+    DB.insert_review(data['nickname'], data, image_file.filename)
 
-    print(data)
-    return render_template("result_review.html", data=data)
-
-
-
-@app.route("/register_reviewpost")
-def reg_reviewpost():
-    return render_template("result_review.html")
+    return render_template("result_review.html", data=data, image_path="./static/img/"+image_file.filename)
 
 
 @app.route("/register_restaurant")
@@ -52,6 +47,7 @@ def reg_restaurant():
     site = request.args.get("site")
     print(name, cate, park, addr, tel, price1, price2, time, site)
     return render_template("register_restaurant.html")
+
 
 
 @app.route("/register_menu", methods=['POST'])
