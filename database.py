@@ -34,6 +34,15 @@ class DBhandler:
                 return False
         return True
 
+    def insert_bestmenu(self, bestmenuname, data):
+        bestmenu_info = {
+            "bestmenuprice": data['bestmenuprice']
+        }
+        self.db.child("bestmenu").child(bestmenuname).set(bestmenu_info)
+        print(data)
+        return True
+
+
     def insert_review(self, nickname, data):
         review_info = {
             "menu": data['menu'],
