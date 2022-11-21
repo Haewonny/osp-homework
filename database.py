@@ -41,7 +41,7 @@ class DBhandler:
             "img_path": img_path
         }
         self.db.child("bestmenu").child(bestmenuname).set(bestmenu_info)
-        print(data)
+        print(data,img_path)
         return True
 
 

@@ -89,9 +89,13 @@ def reg_restaurant_submit_post():
 
 @app.route("/submit_bestmenu_post", methods=['POST'])
 def submit_bestmenu_post():
+    global idx
+    image_file = request.files["file"]
+    image_file.save("static/img/{}".format(image_file.filename))
     data = request.form
-    print(data)
-    return render_template("index.html", data=data)
+    DB.insert_bestmenu(data['bestmenuname'],data,image_file.filename)
+    return render_template("index.html")
+
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
