@@ -54,14 +54,6 @@ def reg_restaurant():
     return render_template("register_restaurant.html")
 
 
-@app.route("/result", methods=['POST'])
-def result_post():
-    image_file = request.files["file"]
-    image_file.save("static/img/{}".format(image_file.filename))
-    data = request.form
-    print(image_file, data)
-    return render_template("result.html", data=data)
-
 @app.route("/register_menu", methods=['POST'])
 def reg_menu():
     data = request.form
@@ -77,15 +69,11 @@ def reg_best_menu():
     return render_template("register_bestmenu.html", data=data)
 
 
-
-
-@app.route("/result", methods=['POST'])
+@app.route("/submit_restaurant_post", methods=['POST'])
 def reg_restaurant_submit_post():
     global idx
     image_file = request.files["file"]
     image_file.save("static/img/{}".format(image_file.filename))
-    data = request.form
-
     if DB.insert_restaurant(data['name'], data, image_file.filename):
         return render_template("result.html", data=data, img_path="static/img/" + image_file.filename)
     else:
