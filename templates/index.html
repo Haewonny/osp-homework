@@ -1,29 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+{% extends 'base.html' %}
+{% block section %}
     <title>Home</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}"
     />
-    <script src="{{ url_for('static', filename='JS/main.js') }}" defer></script>
-  </head>
-    <body>
-    <nav class="navbar">
-      <a href="/" style="float: left;">
-        <img src="{{ url_for('static', filename='img/logo.png') }}" class="logo-img" >
-      </a>
-      <ul class="navbar__menu">
-        <li>
-          <!-- 맛집 등록 화면 -->
-          <a href="/register_restaurant">맛집 등록하기</a>
-        </li>
-        <li>
-          <!-- 리뷰 등록 화면 -->
-          <a href="/register_review">리뷰 등록하기</a>
-        </li>
-      </ul>
-    </nav>
+{% endblock section %}
+{% block section2%}
     <div class="banner">
       <p class="banner_text1">
         무엇을 먹을지 고민될 때는?
@@ -70,5 +51,4 @@
         </div>
       </div>
     </div>
-  </body>
-</html>
+{% endblock section2 %}

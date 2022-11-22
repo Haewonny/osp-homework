@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block section %}
+
+    {% endblock section %}
+    <script src="{{ url_for('static', filename='JS/main.js') }}" defer></script>
+  </head>
+    <body>
+    <nav class="navbar">
+      <a href="/" style="float: left;">
+        <img src="{{ url_for('static', filename='img/logo.png') }}" class="logo-img" >
+      </a>
+      <ul class="navbar__menu">
+        <li>
+          <!-- 맛집 등록 화면 -->
+          <a href="/register_restaurant">맛집 등록하기</a>
+        </li>
+        <li>
+          <!-- 리뷰 등록 화면 -->
+          <a href="/register_review">리뷰 등록하기</a>
+        </li>
+      </ul>
+    </nav>
+    {% block section2 %}
+
+    {% endblock section2 %}
+  </body>
+</html>

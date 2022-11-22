@@ -1,24 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+{% extends "base.html" %}
+{% block section %}
     <title>result</title>
-</head>
-<body>
-    <section>
-        RESULT <br>
-        식당이름 : {{data.rname}} <br>
-        카테고리 : {{data.cate}} <br>
-        주차여부 : {{data.park}} <br>
-        식당 주소 : {{data.addr}} <br>
-        전화번호 : {{data.tel}} <br>
-        가격대 : {{data.price1}} ~ {{data.price2}} <br>
-        영업시간 : {{data.time}} <br>
-        사이트 : {{data.site}} <br>
-        <br><br>
-        BESTMENU RESULT <br>
-        대표메뉴명 : {{data.bestmenuname}} <br>
-        대표메뉴 가격 : {{data.bestmenuprice}} <br>
-    </section>
-</body>
-</html>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/result.css') }}"
+    />
+{% endblock section %}
+
+{% block section2 %}
+    <div class="bg">
+       <div class="title2">--- 맛집 등록 결과 ---</div>
+        <div class="text">
+        식당이름 : {{data.name}}</div>
+        <div class="text">카테고리 : {{data.cate}}</div>
+        <div class="text">주차여부 : {{data.park}}</div>
+        <div class="text">식당 주소 : {{data.addr}}</div>
+        <div class="text">전화번호 : {{data.tel}}</div>
+        <div class="text">가격대 : {{data.price1}} ~ {{data.price2}}</div>
+        <div class="text">영업시간 : {{data.time}}</div>
+        <div class="text">사이트 : {{data.site}}</div>
+
+        <img src="{{image_path}}" alt="My Image" style="width: 200px; height: 200px;">
+
+        <form method="post" action="/register_bestmenu">
+            <input type="hidden" name="restaurant_name" value="{{data.name}}">
+            <div>
+                <div class="text">{{data.name}}의 대표 메뉴를 등록하시려면 아래 버튼을 클릭해주세요.</div>
+                <button type="submit" name="menu" class="buttonR">대표 메뉴 등록</button><br><br>
+            </div>
+        </form>
+</div>
+{% endblock section2%}

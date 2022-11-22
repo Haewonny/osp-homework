@@ -1,0 +1,78 @@
+nav {
+  display: inline;
+  width: 100vw;
+  height: 60px;
+  float: left;
+  background: white;
+}
+
+.logo-img {
+  display: grid;
+  float: left;
+  width: 100px;
+  margin: 0px 100px 0 20px;
+}
+
+.navbar__menu {
+  display: inline;
+  list-style-type: none;
+}
+li {
+  float: left;
+}
+li a {
+  color: #ffba94;
+  float: left;
+  padding: 8px;
+  margin: 0px 45px 0 0;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+
+.bg{
+  background: #fff7ef;
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+}
+
+.title2{
+  display: grid;
+  color: #FAD4B2;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Spoqa Han Sans Neo';
+  margin: 30px 20px 0 30px;
+}
+
+.text{
+  display: grid;
+  color: #424242;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: 'Spoqa Han Sans Neo';
+  font-weight: 10px;
+  margin: 0 20px 0 30px;
+}
+
+.buttonR {
+  background-color: #ffa574;
+  color: white;
+  font-family: 'Spoqa Han Sans Neo';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  font-size: 14px;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  margin: 10px 20px 0 30px;
+}
+
+.buttonR:hover {
+  background-color: #fad4b2;
+}

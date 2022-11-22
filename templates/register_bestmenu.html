@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block section %}
+    <title>register_menu</title>
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/bestmenupost.css') }}"/>
+{% endblock section %}
+
+{% block section2%}
+    <form action="/submit_bestmenu_post" method="post" enctype="multipart/form-data">
+    <div class="postContainer">
+        <div class = "postRestaurantBG">
+            <div class="text">{{data.restaurant_name}}의 대표 메뉴 등록하기</div>
+            <div class="column">
+                    <div class="BOX">
+                            <div>
+                                <label for="img1"></label>
+                                <input type="file" name="file" id="img1"/>
+                            </div>
+                    </div>
+           </div>
+        </div>
+        <div class="Container">
+            <div style="margin-top: 250px"></div>
+            <div>
+                 <input type="hidden" name="restaurant_name" id="restaurant_name" value="{{data.restaurant_name}}">
+                <label class="Text1" for="bestmenuname">메뉴명</label>
+                <input class="Write"  type="text" name="bestmenuname" id="bestmenuname" required/>
+                <br>
+                <label class="Text1" for="bestmenuprice">가격</label>
+                <input class="Write" style="margin-left: 13px" type="text" name="bestmenuprice" id="bestmenuprice" required/>
+            </div>
+
+            <div class="Wraps">
+                    <input class="buttonR" type='submit' value='등록하기'/>
+            </div>
+        </div>
+    </div>
+    </form>
+{% endblock section2 %}

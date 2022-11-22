@@ -1,0 +1,120 @@
+nav {
+  display: inline;
+  width: 100vw;
+  height: 60px;
+  float: left;
+  background: white;
+}
+
+.logo-img {
+  display: grid;
+  float: left;
+  width: 100px;
+  margin: 0px 100px 0 20px;
+}
+
+.navbar__menu {
+  display: inline;
+  list-style-type: none;
+}
+li {
+  float: left;
+}
+li a {
+  color: #ffba94;
+  float: left;
+  padding: 8px;
+  margin: 0px 45px 0 0;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.text {
+    width: 400px;
+    height: 43px;
+    left: 800px;
+    top: 220px;
+
+    font-family: 'Spoqa Han Sans Neo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 43px;
+    text-align: center;
+
+    color: #FFBA94;
+}
+  .buttonR{
+    background-color: #ffa574;
+    color: white;
+    font-family: 'Spoqa Han Sans Neo';
+    font-style: normal;font-weight: 700;
+    font-size: 20px;
+    font-size: 14px;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+  }
+  .Wraps{
+
+    margin: 30px auto;
+      margin-left: 100px;
+  }
+  .postRestaurantBG{
+    float:left;
+    background: #FFF7EF;
+    width: 120vw;
+    height: 120vh;
+      display: inline-block;
+}
+  .postContainer {
+  display: flex;
+  width: 100vw;
+  height: 60px;
+
+  background: white;
+}
+  .Container {
+  float:left;
+ width: 120vw;
+ height: 120vh;
+  background: #FFF7EF;
+   display: inline-block;
+}
+.BOX{
+    width: 450px;
+    height: 450px;
+    background: #FFFFFF;
+    border-radius: 25px;
+  }
+
+.column{
+    flex-direction: column;
+    justify-items: center;
+    float: left;
+    margin: 150px;
+    width: 450px;
+    height: 503px;
+  }
+.Text1{
+    margin: 50% 5% 0 5%;
+    color: rgb(125, 125, 125);
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 40px;
+    font-family: 'Spoqa Han Sans Neo';
+    font-weight: 10px;
+    font-weight: bold;
+  }
+.Write{
+    border-radius: 8px;
+    border-color: transparent;
+    width: 150px;
+    height: 30px;
+    font-family: 'Spoqa Han Sans Neo';
+    font-weight: 10px;
+    text-align: center;
+  }

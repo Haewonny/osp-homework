@@ -1,49 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+{% extends "base.html" %}
+{% block section %}
     <title>Home</title>
     <link
       rel="stylesheet"
       href="{{ url_for('static', filename='css/review.css') }}"
     />
-    <script src="{{ url_for('static', filename='JS/main.js') }}" defer></script>
-  </head>
-  <body>
-  <nav class="navbar">
-      <a href="/" style="float: left;">
-        <img src="{{ url_for('static', filename='img/logo.png') }}" class="logo-img" >
-      </a>
-    </nav>
+{% endblock section %}
+
+{% block section2%}
     <div class="postContainer">
-      <div class="postReviewBG">
-          <div class="column">
+          <form action="/register_reviewpost" method="post" enctype="multipart/form-data" class="postReviewBG">
+          <div class="column" style>
             <div class="Box">
+                <label for="img"></label>
+                <input type="file" name="file" id="img" style="margin: 200px;"/>
             </div>
           </div>
-          <form action="/register_reviewpost" class="info" method="post">
-          <div class="line">
-          <label class="TextI" for="nickname">닉네임</label>
-          <input class="Write1" type="text" placeholder="김이화" name="nickname" id="nickname" required />
-          <label class="TextI" for="menu">메뉴이름</label>
-          <input class="Write2" type="text" placeholder="정확한 메뉴명을 입력해주세요!" name="menu" id="menu" required />
-          </div>
-          <div class="Wrap">
-          <label class="TextI" style="margin-right:5px;" for="star">별점</label>
-          <span class="star">
-              ★★★★★
-              <span>★★★★★</span>
-              <input type="range" oninput="drawStar(this)" value="1" step="1" min="0" max="5" name="star" id="star" required />
-          </span>
-          </div>
-          <label class="TextI" for="content">리뷰내용</label>
-              <textarea class="textArea" placeholder="내용을 입력해주세요!" required maxlength="100" name="content" id="content" required > </textarea>
-          <div class="Wraps">
-          <input class="buttonR" type='submit' value='등록하기'/>
-          </div>
+              <div class="info">
+                  <div class="line">
+                      <label class="TextI" for="nickname">닉네임</label>
+                      <input class="Write1" type="text" placeholder="김이화" name="nickname" id="nickname" required />
+                      <label class="TextI" for="menu">메뉴이름</label>
+                      <input class="Write2" type="text" placeholder="정확한 메뉴명을 입력해주세요!" name="menu" id="menu" required />
+                  </div>
+                  <div class="Wrap">
+                      <label class="TextI" style="margin-right:5px;" for="star">별점</label>
+                      <span class="star">
+                          ★★★★★
+                          <span>★★★★★</span>
+                          <input type="range" oninput="drawStar(this)" value="1" step="1" min="0" max="5" name="star" id="star" required />
+                      </span>
+                  </div>
+                  <label class="TextI" for="content">리뷰내용</label>
+                  <textarea class="textArea" placeholder="내용을 입력해주세요!" required maxlength="100" name="content" id="content" required > </textarea>
+                  <div class="Wraps">
+                      <input class="buttonR" type='submit' value='등록하기'/>
+                  </div>
+              </div>
           </form>
       </div>
-  </div>
-  </body>
-</html>
+{% endblock section2 %}
