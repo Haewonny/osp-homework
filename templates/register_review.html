@@ -1,25 +1,27 @@
-{% extends "base.html" %}
-{% block section %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
     <link
       rel="stylesheet"
       href="{{ url_for('static', filename='css/review.css') }}"
     />
-{% endblock section%}
-
-{% block section2%}
+    <script src="{{ url_for('static', filename='JS/main.js') }}" defer></script>
+  </head>
+  <body>
   <nav class="navbar">
       <a href="/" style="float: left;">
         <img src="{{ url_for('static', filename='img/logo.png') }}" class="logo-img" >
       </a>
     </nav>
     <div class="postContainer">
-      <div class="postReviewBG">
-          <form action="/register_reviewpost" method="post" enctype="multipart/form-data">
-          <div class="column">
+          <form action="/register_reviewpost" method="post" enctype="multipart/form-data" class="postReviewBG">
+          <div class="column" style>
             <div class="Box">
                 <label for="img"></label>
-                <input type="file" name="file" id="img"/>
+                <input type="file" name="file" id="img" style="margin: 200px;"/>
             </div>
           </div>
               <div class="info">
@@ -45,5 +47,5 @@
               </div>
           </form>
       </div>
-  </div>
-{% endblock section2%}
+  </body>
+</html>
