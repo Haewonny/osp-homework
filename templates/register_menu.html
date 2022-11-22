@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+{% extends "base.html" %}
+{% block section %}
         <title>register_menu</title>
-        <script src="{{ url_for('static', filename='JS/main.js') }}" defer></script>
-    </head>
-    <body>
+{% endblock section %}
+
+{% block section2%}
         <form action="/submit_menu_post" method="post" enctype="multipart/form-data">
             <div><br><br>
                 <label for="name">식당이름 : {{data.restaurant_name}}</label>
@@ -36,5 +33,4 @@
                 <button type="submit" name="menu">대표 메뉴 등록</button><br><br>
             </div>
         </form>
-    </body>
-</html>
+{% endblock section2%}

@@ -1,16 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+{% extends "base.html" %}
+{% block section %}
     <title>register restaurant</title>
     <link
       rel="stylesheet"
       href="{{ url_for('static', filename='css/restaurantpost.css') }}"
     />
-    <script src="{{ url_for('static', filename='JS/main.js') }}" defer></script>
-  </head>
-  <body>
+{% endblock section %}
+
+{% block section2%}
     <div class="BG">
       <div class="container">
         <form action="/submit_restaurant_post" method="post" enctype="multipart/form-data">
@@ -121,5 +118,4 @@
         </form>
       </div>
     </div>
-  </body>
-</html>
+{% endblock section2 %}
