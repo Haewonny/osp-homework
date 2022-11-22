@@ -90,7 +90,7 @@ def submit_bestmenu_post():
     image_file.save("static/img/{}".format(image_file.filename))
     data = request.form
     DB.insert_bestmenu(data['restaurant_name'],data,image_file.filename)
-    return render_template("index.html")
+    return render_template("register_bestmenu.html",data=data)
 
 
 if __name__ == "__main__":
