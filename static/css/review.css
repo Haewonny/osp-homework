@@ -59,13 +59,12 @@
 
   .column{
     flex-direction: column;
-    justify-items: center;
     float: left;
     margin: 150px;
     width: 450px;
     height: 503px;
   }
-  
+
   .info{
     margin: 150px;
     width: 1200px;
