@@ -1,3 +1,35 @@
+nav {
+  display: inline;
+  width: 100vw;
+  height: 60px;
+  float: left;
+  background: white;
+}
+
+.logo-img {
+  display: grid;
+  float: left;
+  width: 100px;
+  margin: 0px 100px 0 20px;
+}
+
+.navbar__menu {
+  display: inline;
+  list-style-type: none;
+}
+li {
+  float: left;
+}
+li a {
+  color: #ffba94;
+  float: left;
+  padding: 8px;
+  margin: 0px 45px 0 0;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+}
+
 .text {
     width: 400px;
     height: 43px;
