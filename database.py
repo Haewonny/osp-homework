@@ -34,14 +34,24 @@ class DBhandler:
                 return False
         return True
 
-
-    def insert_bestmenu(self, restaurant_name, data, img_path):
+    def insert_bestmenu(self, bestmenuname, data, img_path):
         bestmenu_info = {
             "bestmenuprice": data['bestmenuprice'],
             "img_path": img_path
         }
-        self.db.child("bestmenu").child(restaurant_name).child(data['bestmenuname']).set(bestmenu_info)
-        print(data,img_path)
+        if self.bestmenu_duplicate_check(bestmenuname):
+            self.db.child("bestmenu").child(bestmenuname).set(bestmenu_info)
+            print(data, img_path)
+            return True
+        else:
+            return False
+
+    def bestmenu_duplicate_check(self, bestmenuname):
+        bestmenunames = self.db.child("bestmenu").get()
+        print(bestmenunames)
+        for res in bestmenunames.each():
+            if res.key() == bestmenuname:
+                return False
         return True
 
     def insert_review(self, nickname, data, img_path):
@@ -54,3 +64,4 @@ class DBhandler:
         self.db.child("review").child(nickname).set(review_info)
         print(data, img_path)
         return True
+
